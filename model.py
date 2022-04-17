@@ -5,11 +5,13 @@ from typing import Optional, List
 
 
 class Answer(BaseModel):
+    option: str
     answer: str
     point: float
-
+    
 
 class Question(BaseModel):
     id: Optional[UUID] = uuid4()
     question: str
     answers: List[Answer]
+
